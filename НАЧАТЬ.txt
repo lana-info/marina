@@ -13,6 +13,9 @@ http://localhost:8765/
 Для работы нужен современный Microsoft Edge, Google Chrome или Firefox.
 Internet Explorer не поддерживается.
 
+Если запуск не удался, не закрывайте окно сразу: прочитайте сообщение или пришлите файл
+marina-server-error.txt из этой папки.
+
 Важно: не запускайте index.html двойным щелчком. Используйте start-marina.bat.
 
 Для остановки закройте чёрное окно PowerShell.

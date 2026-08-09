@@ -8,3 +8,6 @@ Marina — portable запуск для Windows
 Python, PHP и Node.js не требуются: используется встроенный в Windows PowerShell.
 Нужен современный Microsoft Edge, Google Chrome или Firefox. Internet Explorer не поддерживается.
 Для остановки закройте окно PowerShell.
+
+Если запуск не удался, окно останется открытым. Ошибка также будет сохранена в файле
+marina-server-error.txt в основной папке Marina.
