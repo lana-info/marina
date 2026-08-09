@@ -84,3 +84,17 @@
 ## Следующий полезный шаг
 
 Создать и проверить один подготовительный commit, создать публичный `lana-info/marina`, отправить ветку `main`, затем проверить совпадение локального и origin SHA.
+-
+## Фактическое состояние после публикации
+
+- Публичный GitHub repository создан: `https://github.com/lana-info/marina`.
+- Основная ветка: `main`; upstream: `origin/main`.
+- Подготовительный commit: `b99ba8893b83c039c5e77102fbb30adddb5c8a6b`.
+- Локальный HEAD и `origin/main` совпадают.
+- Рабочая копия чистая.
+- T-000 (VDS-first инфраструктура) завершена.
+- Исходного продуктового кода, dependency manifests и baseline tests в репозитории нет; это не ошибка bootstrap, а текущее состояние нового проекта.
+
+## Следующий полезный шаг
+
+На VDS клонировать `main` в `~/projects/marina`, выполнить `chmod +x scripts/bootstrap_vds.sh && ./scripts/bootstrap_vds.sh`, затем продолжить T-002 — calculation core.

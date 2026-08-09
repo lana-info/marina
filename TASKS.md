@@ -119,3 +119,12 @@
 - Verification: shell syntax, `git diff --check`, секретный скан, baseline checks, GitHub SHA/status check.
 - Статус: in_progress.
 - Blockers: до commit/push отсутствуют remote, SHA и VDS clone target.
+-
+## VDS preparation — итог
+
+- Статус: done.
+- GitHub: публичный `https://github.com/lana-info/marina`.
+- Ветка: `main`.
+- Commit: `b99ba8893b83c039c5e77102fbb30adddb5c8a6b`.
+- Проверено: локальный и origin SHA совпадают; рабочая копия чистая.
+- Ограничение: исходного продуктового кода, manifests зависимостей и baseline tests пока нет.
