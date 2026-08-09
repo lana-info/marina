@@ -52,6 +52,7 @@ h2 { margin: 0; font-size: 34px; line-height: 1; }
 .field { display: flex; min-width: 0; flex-direction: column; gap: 8px; }
 .field > span, legend { color: var(--muted); font-size: 11px; letter-spacing: .03em; }
 .field input, .field select, .rule-row select { min-width: 0; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; outline: none; background: transparent; color: var(--ink); padding: 8px 0 10px; font-size: 17px; }
+.text-field { grid-column: 1 / -1; max-width: 320px; }
 .field input:focus, .field select:focus, .rule-row select:focus { border-color: var(--accent); box-shadow: 0 2px 0 var(--accent); }
 .field.compact { max-width: 140px; margin-top: 2px; }
 input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--danger); box-shadow: 0 2px 0 var(--danger); }
@@ -84,6 +85,8 @@ legend { margin-bottom: 12px; }
 .empty-result { margin: 0; color: var(--muted); font-size: 13px; }
 .result { border-top: 1px solid var(--ink); padding-top: 22px; animation: rise .4s ease both; }
 .result-title h3 { margin: 0 0 22px; font-size: 30px; }
+.result-summary { max-width: 620px; margin: -7px 0 24px; color: var(--muted); font-size: 14px; line-height: 1.55; }
+.result-summary strong { color: var(--ink); font-weight: 700; }
 .result-highlight { display: grid; grid-template-columns: auto 1fr; align-items: baseline; gap: 4px 16px; margin-bottom: 28px; }
 .result-highlight strong { font-family: Georgia, serif; font-size: 34px; font-weight: 400; }
 .result-highlight span { color: var(--muted); font-size: 12px; }
@@ -97,6 +100,7 @@ legend { margin-bottom: 12px; }
 .axis small { display: block; margin-top: 14px; }
 .secondary-button { display: inline-flex; gap: 17px; align-items: center; border: 1px solid var(--line); background: transparent; color: var(--ink); padding: 12px 16px; font-size: 12px; }
 .secondary-button:hover { border-color: var(--accent); color: var(--accent); }
+.density-warning { border-left: 2px solid #b78036; color: #8a5c20; margin: 0 0 22px; padding: 4px 0 4px 12px; font-size: 12px; }
 .error-message { border-left: 2px solid var(--danger); color: var(--danger); padding: 4px 0 4px 14px; font-size: 13px; }
 .error-message small { display: block; margin-top: 6px; color: var(--muted); font-size: 10px; }
 .history-panel { border-top: 1px solid var(--line); padding: 38px 0 70px; scroll-margin-top: 20px; }
