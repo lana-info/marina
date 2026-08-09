@@ -70,7 +70,7 @@ MVP локально реализован и проверен. Публикац�
 
 ## Следующий полезный шаг
 
-Передать изменения через GitHub при явном разрешении пользователя на push; production deployment не выполнять.
+Изменения MVP переданы в `origin/main` на commit `58f6895859fca656cf94492e893ce9f886e8bddc`; production deployment не выполнялся.
 -
 ## Подготовка VDS и GitHub
 
