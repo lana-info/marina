@@ -30,8 +30,14 @@ try {
   if (${env:ProgramFiles}) { $edgeCandidates += Join-Path ${env:ProgramFiles} "Microsoft\Edge\Application\msedge.exe" }
   if (${env:ProgramFiles(x86)}) { $edgeCandidates += Join-Path ${env:ProgramFiles(x86)} "Microsoft\Edge\Application\msedge.exe" }
   $edgeCandidates = $edgeCandidates | Where-Object { Test-Path -LiteralPath $_ }
-  if ($edgeCandidates.Count -gt 0) { Start-Process -FilePath $edgeCandidates[0] -ArgumentList $url }
-  else { Start-Process $url }
+  $browserStarted = $false
+  if ($edgeCandidates.Count -gt 0) {
+    try {
+      Start-Process -FilePath $edgeCandidates[0] -ArgumentList $url
+      $browserStarted = $true
+    } catch { }
+  }
+  if (-not $browserStarted) { Write-Host "Open this address in Edge or Chrome: $url" -ForegroundColor Yellow }
 
   Write-Host "Marina started: $url" -ForegroundColor Green
   Write-Host "Close this window to stop Marina." -ForegroundColor DarkGray
@@ -58,7 +64,7 @@ try {
   }
 } catch {
   $message = "Marina could not start.`r`n`r`nError: $($_.Exception.Message)`r`n`r`nCheck that port 8765 is free, then try again."
-  try { Set-Content -LiteralPath $logPath -Value $message -Encoding UTF8 } catch { }
+  try { Set-Content -LiteralPath $logPath -Value $message -Encoding ASCII } catch { }
   Write-Host $message -ForegroundColor Red
   Read-Host "Press Enter to close this window"
   exit 1
