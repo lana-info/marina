@@ -1,0 +1,12 @@
+name = "terra_worker"
+description = "Primary worker for implementation, debugging, integration, and tests."
+model = "gpt-5.6-terra"
+model_reasoning_effort = "medium"
+sandbox_mode = "workspace-write"
+
+developer_instructions = """
+Implement only the assigned scope after inspecting the project state.
+Do not change fundamental architecture without explicit delegation.
+Run relevant tests and compare the result with acceptance criteria.
+Report changed files, commands, evidence, and remaining risks.
+"""
