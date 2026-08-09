@@ -33,8 +33,8 @@ try {
   if ($edgeCandidates.Count -gt 0) { Start-Process -FilePath $edgeCandidates[0] -ArgumentList $url }
   else { Start-Process $url }
 
-  Write-Host "Marina запущена: $url" -ForegroundColor Green
-  Write-Host "Для остановки закройте это окно." -ForegroundColor DarkGray
+  Write-Host "Marina started: $url" -ForegroundColor Green
+  Write-Host "Close this window to stop Marina." -ForegroundColor DarkGray
 
   while ($listener.IsListening) {
     $context = $listener.GetContext()
@@ -57,10 +57,10 @@ try {
     }
   }
 } catch {
-  $message = "Marina не запустилась.`r`n`r`nОшибка: $($_.Exception.Message)`r`n`r`nПроверьте, что порт 8765 свободен, и повторите запуск."
+  $message = "Marina could not start.`r`n`r`nError: $($_.Exception.Message)`r`n`r`nCheck that port 8765 is free, then try again."
   try { Set-Content -LiteralPath $logPath -Value $message -Encoding UTF8 } catch { }
   Write-Host $message -ForegroundColor Red
-  Read-Host "Нажмите Enter, чтобы закрыть окно"
+  Read-Host "Press Enter to close this window"
   exit 1
 } finally {
   if ($listener -and $listener.IsListening) { $listener.Stop() }
