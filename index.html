@@ -29,9 +29,9 @@
         <p class="intro-copy" data-i18n="intro">Введите данные образца или плотность и получите проверяемый размер готового полотна.</p>
       </section>
 
-      <nav class="mode-switch" aria-label="Calculator mode">
-        <button class="mode-button active" data-mode="gauge" type="button" data-i18n="modeGauge">Рассчитать плотность</button>
-        <button class="mode-button" data-mode="counts" type="button" data-i18n="modeCounts">Рассчитать петли</button>
+      <nav class="mode-switch" aria-label="Calculator mode" role="tablist">
+        <button class="mode-button active" data-mode="gauge" type="button" role="tab" aria-selected="true" data-i18n="modeGauge">Рассчитать плотность</button>
+        <button class="mode-button" data-mode="counts" type="button" role="tab" aria-selected="false" data-i18n="modeCounts">Рассчитать петли</button>
       </nav>
 
       <section class="workspace" id="calculator" aria-live="polite"></section>
