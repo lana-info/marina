@@ -58,8 +58,8 @@
   - нет горизонтального скролла;
   - результат можно скопировать и отправить.
 - Verification: тесты локализации и ручная проверка RU/EN на мобильном viewport.
-- Статус: pending.
-- Blockers: T-002.
+- Статус: done.
+- Blockers: отсутствуют.
 
 ## T-004 — Добавить историю и PWA offline shell
 
@@ -77,8 +77,8 @@
   - кэш имеет версию и корректно обновляется;
   - установка проверена в поддерживаемом браузере.
 - Verification: offline test, cache refresh test, mobile browser check.
-- Статус: pending.
-- Blockers: T-003.
+- Статус: done.
+- Blockers: отсутствуют.
 
 ## T-005 — Финальная проверка MVP
 
@@ -96,8 +96,8 @@
   - reviewer не изменяет файлы и приводит конкретные доказательства;
   - публикация не выполняется.
 - Verification: diff, тесты, ручные сценарии, review report.
-- Статус: pending.
-- Blockers: все предыдущие задачи.
+- Статус: done.
+- Blockers: отсутствуют.
 -
 ## T-000 — Подготовить переносимую VDS-first инфраструктуру
 
@@ -117,8 +117,8 @@
   - публичный `lana-info/marina` создан только после явного разрешения пользователя;
   - локальный и origin SHA совпадают после push.
 - Verification: shell syntax, `git diff --check`, секретный скан, baseline checks, GitHub SHA/status check.
-- Статус: in_progress.
-- Blockers: до commit/push отсутствуют remote, SHA и VDS clone target.
+- Статус: done.
+- Blockers: отсутствуют.
 -
 ## VDS preparation — итог
 

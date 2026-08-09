@@ -1,0 +1,13 @@
+{
+  "name": "Marina — калькулятор вязания",
+  "short_name": "Marina",
+  "description": "Точный калькулятор плотности, петель и рядов для вязания.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5f1e8",
+  "theme_color": "#f5f1e8",
+  "lang": "ru",
+  "icons": [
+    { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
