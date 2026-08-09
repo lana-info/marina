@@ -55,6 +55,12 @@ h2 { margin: 0; font-size: 34px; line-height: 1; }
 .field input:focus, .field select:focus, .rule-row select:focus { border-color: var(--accent); box-shadow: 0 2px 0 var(--accent); }
 .field.compact { max-width: 140px; margin-top: 2px; }
 input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--danger); box-shadow: 0 2px 0 var(--danger); }
+.detail-switch { display: inline-flex; gap: 4px; margin-top: 28px; border-bottom: 1px solid var(--line); }
+.detail-button { border: 0; border-bottom: 2px solid transparent; background: transparent; color: var(--muted); padding: 9px 12px 10px; font-size: 12px; }
+.detail-button.active { border-color: var(--accent); color: var(--ink); font-weight: 700; }
+.detail-button:focus-visible, .mode-button:focus-visible, .text-button:focus-visible, .language-button:focus-visible, .history-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.detail-hint { margin: 11px 0 0; color: var(--muted); font-size: 11px; }
+.advanced-settings[hidden] { display: none; }
 fieldset { margin: 33px 0 0; border: 0; padding: 0; }
 legend { margin-bottom: 12px; }
 .segmented { display: inline-flex; border-bottom: 1px solid var(--line); }

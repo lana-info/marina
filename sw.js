@@ -1,4 +1,4 @@
-const CACHE_NAME = "marina-shell-v4";
+const CACHE_NAME = "marina-shell-v5";
 const APP_SHELL = ["/", "/index.html", "/src/app.js", "/src/styles.css", "/src/calculation-core.js", "/src/ui-utils.js", "/manifest.webmanifest", "/icons/icon.svg"];
 
 self.addEventListener("install", (event) => {
