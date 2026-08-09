@@ -10,6 +10,9 @@ MARINA — КАЛЬКУЛЯТОР ДЛЯ ВЯЗАНИЯ
 Если браузер не открылся, перейдите по адресу:
 http://localhost:8765/
 
+Для работы нужен современный Microsoft Edge, Google Chrome или Firefox.
+Internet Explorer не поддерживается.
+
 Важно: не запускайте index.html двойным щелчком. Используйте start-marina.bat.
 
 Для остановки закройте чёрное окно PowerShell.
