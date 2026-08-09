@@ -1,5 +1,5 @@
 const CACHE_NAME = "marina-shell-v6";
-const APP_SHELL = ["/", "/index.html", "/src/app.js", "/src/styles.css", "/src/calculation-core.js", "/src/ui-utils.js", "/manifest.webmanifest", "/icons/icon.svg"];
+const APP_SHELL = ["./", "./index.html", "./src/app.js", "./src/styles.css", "./src/calculation-core.js", "./src/ui-utils.js", "./manifest.webmanifest", "./icons/icon.svg"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)).then(() => self.skipWaiting()));
@@ -15,5 +15,5 @@ self.addEventListener("fetch", (event) => {
     const copy = response.clone();
     caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
     return response;
-  }).catch(() => caches.match("/index.html"))));
+  }).catch(() => caches.match("./index.html"))));
 });

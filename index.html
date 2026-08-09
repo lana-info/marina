@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="theme-color" content="#f5f1e8" />
     <meta name="description" content="Точный калькулятор плотности, петель и рядов для вязания." />
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="icon" href="/icons/icon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./src/styles.css" />
     <title>Marina — калькулятор вязания</title>
   </head>
   <body>
     <main class="shell">
       <header class="topbar">
-        <a class="brand" href="/" aria-label="Marina">
+        <a class="brand" href="./" aria-label="Marina">
           <span class="brand-mark" aria-hidden="true">M</span>
           <span>marina</span>
         </a>
@@ -42,7 +42,11 @@
             <p class="eyebrow" data-i18n="saved">Сохранённые расчёты</p>
             <h2 data-i18n="historyTitle">История</h2>
           </div>
-          <button class="text-button" id="clear-history" type="button" data-i18n="clear">Очистить</button>
+          <div class="history-actions">
+            <button class="text-button" id="export-history" type="button" data-i18n="exportHistory">Скачать историю</button>
+            <button class="text-button" id="print-result" type="button" data-i18n="printResult">Печать / PDF</button>
+            <button class="text-button" id="clear-history" type="button" data-i18n="clear">Очистить</button>
+          </div>
         </div>
         <div id="history-list" class="history-list"></div>
       </section>
@@ -50,6 +54,6 @@
       <footer class="footer-note"><span class="dot"></span><span data-i18n="offline">Работает офлайн после первого запуска</span></footer>
     </main>
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <script type="module" src="/src/app.js"></script>
+    <script type="module" src="./src/app.js"></script>
   </body>
 </html>
