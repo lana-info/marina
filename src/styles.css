@@ -105,6 +105,7 @@ legend { margin-bottom: 12px; }
 .error-message small { display: block; margin-top: 6px; color: var(--muted); font-size: 10px; }
 .history-panel { border-top: 1px solid var(--line); padding: 38px 0 70px; scroll-margin-top: 20px; }
 .history-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 12px 18px; }
+.history-hint { margin: 14px 0 20px; color: var(--muted); font-size: 13px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 20px; }
 .section-heading h2 { font-size: 30px; }
 .history-list { border-top: 1px solid var(--line); }
