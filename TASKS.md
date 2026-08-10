@@ -180,6 +180,25 @@
 - Статус: done.
 - Blockers: отсутствуют.
 
+## T-013 — Подтвердить доставку читаемого Windows-интерфейса
+
+- Цель: убедиться, что пользователь получает именно новый CSS, а не старый Service Worker cache.
+- Польза: визуальные изменения гарантированно доходят до клиента после обновления сборки.
+- Приоритет: P1.
+- Зависимости: T-012.
+- Исполнитель: `terra_worker` + независимый review `luna_worker`.
+- Проверяющий: главный оркестратор.
+- Ожидаемый результат: cache v9, крупные computed styles, чистый Windows ZIP из текущего commit.
+- Acceptance criteria:
+  - независимый review подтверждает источник проблемы и отсутствие рассинхронизации в финальном архиве;
+  - browser computed styles подтверждают field 14px, mode 15px, primary button 15px, guide 14px, step 13px;
+  - Service Worker cache содержит только v9;
+  - мобильный overflow отсутствует;
+  - Windows ZIP проверен `unzip -t` и собран из опубликованного commit.
+- Verification: mobile Chromium, npm test, diff check, archive integrity.
+- Статус: done.
+- Blockers: Windows-specific запуск физически не исполнялся в Linux-среде; архив и исходники проверены.
+
 ## T-003 — Собрать мобильный UI и локализацию RU/EN
 
 - Цель: дать пользователю короткий понятный сценарий ввода и результата.
